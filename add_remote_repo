@@ -17,7 +17,7 @@ function checkEnv(){
         read -s password
         echo ""
         echo -en "machine github.com\nlogin ${GITUSERNAME}\npassword ${password}\n" > $netrc
-        yum install -y pinentry
+        #yum install -y pinentry
         gpg -e -r ${GITEMAIL} ${netrc}
         if [ $? -ne 0 ]; then
             gpg --gen-key
