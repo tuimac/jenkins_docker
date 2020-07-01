@@ -58,8 +58,6 @@ unclassified:
         recursive: true
   gitHubConfiguration:
     apiRateLimitChecker: ThrottleForNormalize
-  gitHubPluginConfig:
-    hookUrl: "http://node-master:8080/github-webhook/"
   gitSCM:
     createAccountBasedOnEmail: false
     showEntireCommitSummaryInChanges: false
@@ -68,7 +66,7 @@ unclassified:
     actualiseOnFactory: false
   location:
     adminAddress: "address not configured yet <nobody@nowhere>"
-    url: "http://node-master:8080/"
+    url: "http://localhost:8080/"
   mailer:
     charset: "UTF-8"
     useSsl: false
@@ -77,10 +75,6 @@ unclassified:
     localRepository: "default"
   pollSCM:
     pollingThreadCount: 10
-  simple-theme-plugin:
-    elements:
-    - cssUrl:
-        url: "https://cdn.jsdelivr.net/gh/jenkinsci/dark-theme@0.0.3/src/main/resources/io/jenkins/plugins/darktheme/theme-system.css"
   themeManager:
     disableUserThemes: false
   upstream:
