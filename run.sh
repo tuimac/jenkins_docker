@@ -3,7 +3,7 @@
 # Change variables below if you need
 ##############################
 NAME="jenkins"
-VOLUME="${PWD}/volume"
+GITDIR="${HOME}/github"
 DOCKERHUBUSER=""
 IMAGE=${DOCKERHUBUSER}/${NAME}
 ##############################
@@ -11,7 +11,7 @@ IMAGE=${DOCKERHUBUSER}/${NAME}
 function runContainer(){
     docker run -itd --name ${NAME} \
                 -h ${NAME} \
-                -v "${PWD}/volume:/opt" \
+                -v "${GITDIR}/tagdns/test:/opt/tagdns" \
                 -v "/var/run/docker.sock:/var/run/docker.sock" \
                 -v "/etc/localtime:/etc/localtime:ro" \
                 -v "/usr/bin/docker:/usr/bin/docker" \
@@ -27,18 +27,13 @@ function cleanup(){
 }
 
 function createContainer(){
-    mkdir ${VOLUME}
     docker build -t ${NAME} .
     runContainer
     cleanup
 }
 
 function rerunContainer(){
-    echo -en "Do you want to commit image? [y(default)/n]: "
-    read answer
-    if [ "$answer" != "n" ]; then
-        commitImage ${NAME}
-    fi
+    commitImage ${NAME}
     docker stop ${NAME}
     docker rm ${NAME}
     runContainer
@@ -52,7 +47,6 @@ function deleteAll(){
     docker rmi docker_${NAME}
     docker rmi jenkins/jenkins:lts
     cleanup
-    rm -rf ${VOLUME}
 }
 
 function commitImage(){
