@@ -22,8 +22,7 @@ RUN apt update && \
     /usr/local/bin/install-plugins.sh < /usr/share/jenkins/ref/plugins.txt && \
     mkdir -p /etc/vim/undo && \
     mkdir -p /etc/vim/backup && \
-    mkdir -p /usr/share/jenkins/ref/casc_configs && \
     pip3 install -r requirements.txt
 
 ADD env/vimrc /etc/vim/vimrc.local
-ADD config/jenkins.yaml /usr/share/jenkins/ref/casc_configs/jenkins.yaml
+ADD config/jenkins.yaml /var/jenkins_home/casc_configs/jenkins.yaml

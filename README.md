@@ -51,7 +51,7 @@ $ cat Anyfilename.yaml | java -jar jenkins-cli.jar -s http://localhost:8080 crea
 #### Access from Browser
 
 Access `http://localhost:8080` is default.
-So you can change the port within Dockerfilr or `run.sh` to config container port or deploy which network.
+So you can change the port within Dockerfile or `run.sh` to config container port or deploy which network.
 
 ## Authors
 
