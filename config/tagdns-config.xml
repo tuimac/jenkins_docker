@@ -43,7 +43,7 @@
       <submoduleCfg class="list"/>
       <extensions/>
     </scm>
-    <scriptPath>docker/jenkins/config/Jenkinsfile</scriptPath>
+    <scriptPath>docker/tagdns/Jenkinsfile</scriptPath>
     <lightweight>true</lightweight>
   </definition>
   <triggers/>
