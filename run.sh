@@ -11,7 +11,7 @@ IMAGE=${DOCKERHUBUSER}/${NAME}
 function runContainer(){
     docker run -itd --name ${NAME} \
                 -h ${NAME} \
-                -v "volume:/tmp" \
+                -v "${PWD}/volume:/opt" \
                 -v "/var/run/docker.sock:/var/run/docker.sock" \
                 -v "/etc/localtime:/etc/localtime:ro" \
                 -v "/usr/bin/docker:/usr/bin/docker" \
