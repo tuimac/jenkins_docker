@@ -27,7 +27,8 @@ RUN apt update && \
     mkdir -p /etc/vim/undo && \
     mkdir -p /etc/vim/backup && \
     pip3 install -r requirements.txt && \
-    mkdir /opt/tagdns
+    mkdir /opt/tagdns && \
+    mkdir /root/workplace
 
 ADD env/vimrc /etc/vim/vimrc.local
 ADD config/jenkins.yaml $config
