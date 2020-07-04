@@ -26,7 +26,7 @@ RUN apt update && \
     /usr/local/bin/install-plugins.sh < $plugin && \
     mkdir -p /etc/vim/undo && \
     mkdir -p /etc/vim/backup && \
-    pip3 install -r requirements.txt \
+    pip3 install -r requirements.txt && \
     mkdir /opt/tagdns
 
 ADD env/vimrc /etc/vim/vimrc.local
