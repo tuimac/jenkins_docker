@@ -18,6 +18,7 @@ ADD env/login_screen /root/.login_screen
 ADD env/vimrc /etc/vim/vimrc.local
 ADD config/plugins.txt $plugin 
 ADD config/requirements.txt /root/requirements.txt
+ADD lib/deletedockerenv.py /root/deletedockerenv.py
 ADD .aws /root/.aws
 
 RUN apt update && \

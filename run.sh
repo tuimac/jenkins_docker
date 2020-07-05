@@ -14,6 +14,7 @@ function runContainer(){
                 -v "${GITDIR}/tagdns/test:/opt/tagdns" \
                 -v "/var/run/docker.sock:/var/run/docker.sock" \
                 -v "/etc/localtime:/etc/localtime:ro" \
+                -v "volume:/tmp" \
                 -v "/usr/bin/docker:/usr/bin/docker" \
                 -p "8080:8080" \
                 -p "50000:50000" \
