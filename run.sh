@@ -11,7 +11,6 @@ IMAGE=${DOCKERHUBUSER}/${NAME}
 function runContainer(){
     docker run -itd --name ${NAME} \
                 -h ${NAME} \
-                -v "${GITDIR}/tagdns/test:/opt/tagdns" \
                 -v "/var/run/docker.sock:/var/run/docker.sock" \
                 -v "/etc/localtime:/etc/localtime:ro" \
                 -v "volume:/tmp" \

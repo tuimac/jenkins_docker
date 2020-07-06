@@ -18,7 +18,6 @@ ADD env/login_screen /root/.login_screen
 ADD env/vimrc /etc/vim/vimrc.local
 ADD config/plugins.txt $plugin 
 ADD config/requirements.txt /root/requirements.txt
-ADD lib/deletedockerenv.py /root/deletedockerenv.py
 ADD .aws /root/.aws
 
 RUN apt update && \
@@ -28,10 +27,13 @@ RUN apt update && \
     mkdir -p /etc/vim/undo && \
     mkdir -p /etc/vim/backup && \
     pip3 install -r requirements.txt && \
-    mkdir /opt/tagdns && \
+    rm -f requirements.txt && \
+    mkdir /root/tools && \
+    mkdir /root/reports && \
     mkdir /root/workplace
 
 ADD env/vimrc /etc/vim/vimrc.local
 ADD config/jenkins.yaml $config
+ADD lib/deletedockerenv.py /root/tools/deletedockerenv.py
 
 ENV CASC_JENKINS_CONFIG $config

@@ -31,6 +31,19 @@ jenkins:
   views:
   - all:
       name: "all"
+  - dashboard:
+      columns:
+      - "status"
+      - "weather"
+      - "jobName"
+      - "lastSuccess"
+      - "lastFailure"
+      - "lastDuration"
+      - "buildButton"
+      - "favoriteColumn"
+      jobNames:
+      - "tagdns"
+      name: "tagdns"
   viewsTabBar: "standard"
 security:
   apiToken:
@@ -58,6 +71,8 @@ unclassified:
         recursive: true
   gitHubConfiguration:
     apiRateLimitChecker: ThrottleForNormalize
+  gitHubPluginConfig:
+    hookUrl: "http://localhost:8080/github-webhook/"
   gitSCM:
     createAccountBasedOnEmail: false
     showEntireCommitSummaryInChanges: false

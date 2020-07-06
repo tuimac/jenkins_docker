@@ -130,10 +130,11 @@ ssh-steps
 git-client
 command-launcher
 pipeline-timeline
+configuration-as-code
 sse-gateway
 cloudbees-folder
 github-pr-coverage-status
 blueocean-bitbucket-pipeline
-docker-java-api
 aws-global-configuration
-configuration-as-code
+docker-java-api
+dashboard-view
