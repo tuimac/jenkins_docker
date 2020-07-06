@@ -31,19 +31,6 @@ jenkins:
   views:
   - all:
       name: "all"
-  - dashboard:
-      columns:
-      - "status"
-      - "weather"
-      - "jobName"
-      - "lastSuccess"
-      - "lastFailure"
-      - "lastDuration"
-      - "buildButton"
-      - "favoriteColumn"
-      jobNames:
-      - "tagdns"
-      name: "tagdns"
   viewsTabBar: "standard"
 security:
   apiToken:

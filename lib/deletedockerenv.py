@@ -45,7 +45,7 @@ def removeContainer(client, name):
 def stopContainer(client, name):
     try:
         target = client.containers.get(name)
-        if target.status != 'running':
+        if target.status == 'running':
             target.stop()
     except:
         errors.append('stopContainer')
