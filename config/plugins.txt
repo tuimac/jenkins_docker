@@ -17,6 +17,7 @@ python
 github-pullrequest
 jdk-tool
 htmlpublisher
+dashboard-view
 jquery-detached
 pipeline-config-history
 pubsub-light
@@ -137,4 +138,6 @@ github-pr-coverage-status
 blueocean-bitbucket-pipeline
 aws-global-configuration
 docker-java-api
-dashboard-view
+performance
+junit-realtime-test-reporter
+JiraTestResultReporter
